@@ -31,6 +31,16 @@ Execute the approved plan task by task while continually checking the code again
 7. Stop on any validation error. Do not infer which revision the user intended.
 8. Set `state.md` phase to `implement`, status to `active`, and `Next Action` to the first incomplete task. Create a todo for each remaining plan task.
 
+## Pre-Task Feasibility Gate
+
+Before task RED or any packaging work, apply this gate to tasks involving packages, service managers, runtime identity, users or groups, sockets, mounts, capabilities, or ownership and permission boundaries:
+
+1. Trace installation, startup, steady-state, shutdown, upgrade, and removal as applicable. Identify the runtime identity and effective privileges for every actor.
+2. Map each required create, bind, chown, chmod, read, write, and delete operation to its actor, target, parent directory ownership and mode, and lifecycle timing. Confirm the runtime identity can perform every operation while the required final ownership, modes, and drift guardrails all remain true.
+3. Confirm the planned file and interface scope contains the mechanism needed to satisfy those constraints. Do not assume root execution, persistent capabilities, relaxed permissions, privilege dropping, socket activation, or other unapproved infrastructure.
+4. When platform semantics determine feasibility, run the smallest isolated feasibility probe inside the approved execution boundary. Treat it as diagnostic evidence, not task RED.
+5. If the design or approved scope is infeasible, stop before packaging or production changes and follow `Drift and Blockers`.
+
 ## Execute Each Task
 
 For every task, maintain the plan order unless the plan explicitly permits parallel work:

@@ -85,6 +85,25 @@ class SkillContractTests(unittest.TestCase):
         ):
             self.assertIn(phrase, content)
 
+    def test_implement_checks_runtime_identity_ownership_before_packaging(self):
+        content = self.skill("implement")
+
+        for phrase in (
+            "Pre-Task Feasibility Gate",
+            "Before task RED or any packaging work",
+            "runtime identity",
+            "parent directory",
+            "create, bind, chown, chmod, read, write, and delete",
+            "planned file and interface scope",
+            "isolated feasibility probe",
+        ):
+            self.assertIn(phrase, content)
+
+        self.assertLess(
+            content.index("Pre-Task Feasibility Gate"),
+            content.index("## Execute Each Task"),
+        )
+
     def test_skill_frontmatter_has_only_name_and_description(self):
         for name in ("brainstorm", "plan", "implement"):
             with self.subTest(skill=name):
