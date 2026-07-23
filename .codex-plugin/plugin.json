@@ -1,0 +1,37 @@
+{
+  "name": "jsip",
+  "version": "0.1.0+codex.20260723205409",
+  "description": "A document-driven project workflow that preserves intent from brainstorming through implementation.",
+  "author": {
+    "name": "jsipling",
+    "url": "https://github.com/jsipling"
+  },
+  "homepage": "https://github.com/jsipling/jsip",
+  "repository": "https://github.com/jsipling/jsip",
+  "license": "MIT",
+  "keywords": [
+    "brainstorming",
+    "planning",
+    "implementation",
+    "drift-prevention",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "JSIP",
+    "shortDescription": "Document-driven project delivery without drift",
+    "longDescription": "JSIP guides one initiative through explicit brainstorming, planning, and test-first implementation stages. Versioned artifacts, approval gates, and traceable evidence keep implementation aligned with approved intent.",
+    "developerName": "jsipling",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use JSIP to turn this idea into an approved specification.",
+      "Create an implementation plan from my approved JSIP spec.",
+      "Implement my approved JSIP plan without drifting from intent."
+    ]
+  }
+}

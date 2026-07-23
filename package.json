@@ -1,0 +1,11 @@
+{
+  "name": "jsip",
+  "version": "0.1.0",
+  "description": "Document-driven project workflows for coding agents",
+  "type": "module",
+  "main": ".opencode/plugins/jsip.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "jsip",
+  "version": "0.1.0",
+  "description": "A document-driven project workflow that preserves intent from brainstorming through implementation.",
+  "author": {
+    "name": "jsipling"
+  },
+  "homepage": "https://github.com/jsipling/jsip",
+  "repository": "https://github.com/jsipling/jsip",
+  "license": "MIT",
+  "keywords": [
+    "brainstorming",
+    "planning",
+    "implementation",
+    "drift-prevention",
+    "workflow"
+  ]
+}

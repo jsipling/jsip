@@ -1,0 +1,6 @@
+interface:
+  display_name: "JSIP Implement"
+  short_description: "Execute an approved plan without intent drift"
+  default_prompt: "Use $implement to execute my approved JSIP plan test-first without drifting from intent."
+policy:
+  allow_implicit_invocation: false

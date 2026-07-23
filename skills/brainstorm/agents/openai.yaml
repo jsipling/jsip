@@ -1,0 +1,6 @@
+interface:
+  display_name: "JSIP Brainstorm"
+  short_description: "Turn an initiative into an approved spec"
+  default_prompt: "Use $brainstorm to develop this initiative into an approved specification."
+policy:
+  allow_implicit_invocation: false
